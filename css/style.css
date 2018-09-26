@@ -1202,6 +1202,9 @@ span.price {
 	}
 }
 @media(max-width: 768px){
+    .align-left {
+        margin-left: 0 !important;
+    }
 	.tab-grids {
 		padding: 2em;
 	}
