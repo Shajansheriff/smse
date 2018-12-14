@@ -682,13 +682,12 @@ h3.heading:after{
     margin: 2em auto 0;
     padding: 2em 5em 2em;
     text-align: center;
-	border: 3px solid #ccc;
+	border: 3px solid #222;
 }
 .wthree_testimonials_grid1,.wthree_testimonials_grid{
 	width: 90%;
 }
 .wthree_testimonials_grid p {
-    color: #fff;
     line-height: 2.3em;
     margin: 1em 0;
     font-size: 1em;
@@ -1466,4 +1465,18 @@ span.price {
 
 .contact {
     margin-bottom: 75px;
+}
+
+.payment-button {
+    padding: 10px;
+    border: 2px solid #000;
+    color: #000;
+}
+
+.payment-button:hover {
+    color: green;
+}
+
+.workshop {
+    background-color: #FFF;
 }
