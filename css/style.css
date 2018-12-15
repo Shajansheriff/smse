@@ -1001,18 +1001,18 @@ span.price {
 }
 /*-- //pricing --*/
 
-/*-- Appointment --*/
-.appointment{
-	background: url(../images/appointment.jpg) no-repeat 0px 0px;
+/*-- registration --*/
+.registration{
+	background: url(../images/students.jpg) no-repeat 0px 0px;
 	background-size: cover;
 }
-.appointment h3.heading,.testimonials h3.heading{
+.registration h3.heading,.testimonials h3.heading{
 	color: #fff;
 }
-.appointment h3.heading:after,.testimonials h3.heading:after {
+.registration h3.heading:after,.testimonials h3.heading:after {
     background: #fff;
 }
-.appointment .heading i,.testimonials .heading i{
+.registration .heading i,.testimonials .heading i{
 	color: #fff;
 }
 .contact_grid_right input[type="text"], .contact_grid_right input[type="email"], .contact_grid_right textarea {
@@ -1077,7 +1077,7 @@ span.price {
     background: #fff;
     color: #333;
 }
-/*-- //Appointment --*/
+/*-- //registration --*/
 
 /*-- to-top --*/
 #toTop {
