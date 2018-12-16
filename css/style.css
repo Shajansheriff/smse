@@ -1015,7 +1015,10 @@ span.price {
 .registration .heading i,.testimonials .heading i{
 	color: #fff;
 }
-.contact_grid_right input[type="text"], .contact_grid_right input[type="email"], .contact_grid_right textarea {
+.contact_grid_right input[type="text"],
+.contact_grid_right input[type="email"],
+.contact_grid_right textarea,
+.contact_grid_right input[type="tel"] {
     outline: none;
     padding: 15px 15px;
     font-size: 14px;
@@ -1051,7 +1054,7 @@ span.price {
 .contact_left_grid :-moz-placeholder { /* Firefox 18- */
   color: #eee;
 }
-.contact_grid_right input[type="submit"] {
+.contact_grid_right button[type="submit"] {
     outline: none;
     padding: 20px 0;
     font-size: 14px;
@@ -1479,4 +1482,8 @@ span.price {
 
 .workshop {
     background-color: #FFF;
+}
+
+.thank-you {
+    color: #fff;
 }
