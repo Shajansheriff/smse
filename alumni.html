@@ -99,7 +99,45 @@
             <h3 class="heading mb-sm-5 mb-3 text-uppercase">Alumni meet 2.0 </h3>
             <p>As a part of assortment of events planned as a part of the 10th year celebrations of the Society Materials Science Engineers, we proudly present to you, a mega alumni meet, Edition 2.O "சங்கமம்" aimed at rekindling our bond with our fellow materials scientists, who are spread far and wide across the globe. 
 Come join us on 26th January 2018 at Henry Maudslay Hall, as we promise to deliver a totally spellbinding experience! Stay tuned to our website for updates on the dates, venues and all other essentials!
-</p>
+<a href="https://m.facebook.com/story.php?story_fbid=2197963657126766&amp;id=1547563798833425" target="_blank" rel="noopener noreferrer">Know More...</a></p>
+        </div>
+        <br>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <img class="img-fluid" src="images/alumini.jpg" style="height: 577px" alt="">
+                </div>
+                <div class="col-sm-6">
+                <div class="alumini-form">
+                    <h3 class="heading" style="color: white;text-align: center;padding-bottom: 26px;">REGISTER</h3>
+                    <div id="alumniThankYou" class="text-center" style="display: none;">
+                        <h6 class="thank-you">Thank you for registration!</h6>
+                    </div>
+                    <form id="alumniForm">
+					<div class="contact_grid_right">
+						<div class="form-group">
+							<input class="form-control" type="text" id="name" name="name" placeholder="Your Name" required="">
+						</div>
+						<div class="form-group">
+							<input class="form-control" type="email" id="email" name="email" placeholder="Your Email" required="">
+						</div>
+						<div class="form-group">
+							<input class="form-control" type="tel" pattern="^[6-9]\d{9}$" id="phone" name="phone" placeholder="Phone Number"
+ required="">
+						</div>
+						<div class="form-group">
+							<input class="form-control" type="text" id="year" name="year" placeholder="Year of Passed out" required="">
+						</div>
+						<div class="form-group">
+							<input class="form-control" type="text" id="designation" name="designation" placeholder="Designation" required="">
+						</div>
+						<button type="submit" class="form-control" id="submitButton">Submit</button>
+					</div>
+				</form>
+            </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -130,11 +168,46 @@ Come join us on 26th January 2018 at Henry Maudslay Hall, as we promise to deliv
 <!-- //footer section -->
 
 <!-- js-scripts -->
-
+<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyDHhld0vxeNiy4STlGYld_GxVMzC0C9GUw",
+        authDomain: "try-auth-a062c.firebaseapp.com",
+        databaseURL: "https://try-auth-a062c.firebaseio.com",
+        projectId: "try-auth-a062c",
+        storageBucket: "try-auth-a062c.appspot.com",
+        messagingSenderId: "448340941144"
+    };
+    firebase.initializeApp(config);
+</script>
 <!-- js -->
 <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script> <!-- Necessary-JavaScript-File-For-Bootstrap -->
 <!-- //js -->
+<script>
+    // Alumni Registration
+    var alumni = firebase.database().ref("alumni");
+    $("#alumniForm").submit(function (event) {
+        event.preventDefault();
+        var name = $("#name").val();
+        var email = $("#email").val();
+        var phone = $("#phone").val();
+        var year = $("#year").val();
+        var designation = $("#designation").val();
 
+
+        alumni.push({
+            "name": name,
+            "email": email,
+            "phone": phone,
+            "year": year,
+            "designation": designation
+        });
+        $('#alumniThankYou').show();
+        $('#alumniForm').hide();
+        return false;
+    });
+</script>
 </body>
 </html>

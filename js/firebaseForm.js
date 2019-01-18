@@ -1,8 +1,6 @@
 
 
 var users = firebase.database().ref("users");
-
-
 $("#registrationForm").submit(function (event) {
   event.preventDefault();
   var name = $("#name").val();
@@ -25,4 +23,3 @@ $("#registrationForm").submit(function (event) {
   $('#formGrid').hide();
   return false;
 });
-

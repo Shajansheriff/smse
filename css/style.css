@@ -1487,3 +1487,10 @@ span.price {
 .thank-you {
     color: #fff;
 }
+
+.alumini-form {
+    min-height: 577px;
+    background: #222;
+    padding: 40px 50px;
+    border: 1px dashed #222;
+}
